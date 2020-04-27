@@ -2,8 +2,6 @@
 #include <fstream>
 #include <cmath>
 #define PI 3.14
-using namespace std;
-
 class Brake
 {
 public:
@@ -30,6 +28,13 @@ public:
     double Nr;
     double tau_blmax; //左タイヤの最大ブレーキ力
     double tau_brmax; //右タイヤの最大ブレーキ力
+
+    double tau_bl[500] = {};
+    double tau_br[500] = {};
+    double fb[500] = {};
+    double nb[500] = {};
+    double nb_max[500] = {};
+    double nb_Max = 0;
 
     void set_parameter();
     void check_calulate_force();
